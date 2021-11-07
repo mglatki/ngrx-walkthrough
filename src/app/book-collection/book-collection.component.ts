@@ -7,7 +7,7 @@ import { Book } from '../book-list/books.model';
   styleUrls: ['./book-collection.component.scss']
 })
 export class BookCollectionComponent implements OnInit {
-  @Input() books: ReadonlyArray<Book> = [];
+  @Input() books: ReadonlyArray<Book | undefined> | null = [];
   @Output() remove = new EventEmitter<string>();
 
   constructor() { }
