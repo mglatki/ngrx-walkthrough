@@ -8,6 +8,7 @@ import { collectionReducer } from './state/collection.reducer';
 import { StoreModule } from '@ngrx/store';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookCollectionComponent } from './book-collection/book-collection.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { BookCollectionComponent } from './book-collection/book-collection.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     StoreModule.forRoot({ books: booksReducer, collection: collectionReducer}, {})
   ],
   providers: [],
