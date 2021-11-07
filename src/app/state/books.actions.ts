@@ -11,7 +11,7 @@ export const removeBook = createAction(
     props<{ bookId: string}>()
 );
 
-export const retrieveBookList = createAction(
+export const retrievedBookList = createAction(
     '[Book List/API] Retrieve Books Success',
     props<{ books: ReadonlyArray<Book>}>()
 );
