@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Book } from '../book-list/books.model';
 
 @Component({
   selector: 'app-book-collection',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-collection.component.scss']
 })
 export class BookCollectionComponent implements OnInit {
+  @Input() books: ReadonlyArray<Book> = [];
+  @Output() remove = new EventEmitter<string>();
 
   constructor() { }
 
