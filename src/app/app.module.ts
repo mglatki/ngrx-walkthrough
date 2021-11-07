@@ -7,11 +7,13 @@ import { booksReducer } from './state/books.reducer';
 import { collectionReducer } from './state/collection.reducer';
 import { StoreModule } from '@ngrx/store';
 import { BookListComponent } from './book-list/book-list.component';
+import { BookCollectionComponent } from './book-collection/book-collection.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookListComponent
+    BookListComponent,
+    BookCollectionComponent
   ],
   imports: [
     BrowserModule,
